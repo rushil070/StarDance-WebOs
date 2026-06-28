@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="
+  background-image: url('./forest.jpg');
+  background-size: cover;
+  height: 100vh;
+">
+
+<div class="window" id="welcome"
+     style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+
+  <div class="windowheader" id="welcomeheader">
+    <span style="font-size: 20px;">🚪</span>
+
+    <span style="letter-spacing: 2px; text-transform: uppercase;">
+      HANDLE
+    </span>
+
+    <p class="closebutton" id="welcomeclose">
+      ❌
+    </p>
+  </div>
+
+  <h1 style="margin-top: 0;">Shrek OS</h1>
+
+  <p>
+    Shrek is one of the best characters ever created. He challenges stereotypes by proving that
+    true worth comes from who you are on the inside, not how you appear to others. This is why he earned his own OS.
+  </p>
+
+  <img src="https://static.voices.com/wp-content/uploads/2025/01/shrek-scaled.jpg"
+       alt="Shrek"
+       width="400"
+       style="border-radius:20px;">
+
+  <img src="https://lebanonoperahouse.org/app/uploads/2024/01/Shrek-768x432-1.png"
+       alt="Shrek"
+       width="400"
+       style="border-radius:20px;">
+
+</div>
+
+<div class="window" id="posts"
+     style="top: 100px; left: 100px; display: none; flex-direction: column;">
+
+  <div class="windowheader" id="postsheader">
+    <span>📝</span>
+    <span>Posts</span>
+    <p class="closebutton" id="postsclose">❌</p>
+  </div>
+
+  <div style="display: flex; height: 400px; gap: 10px;">
+
+    <div id="sidebar"
+         style="width: 200px; background: #f2f2f2; border-radius: 10px; padding: 10px;">
+    </div>
+
+    <div id="postContent"
+         style="flex: 1; background: white; border-radius: 10px; padding: 10px; overflow-y: auto;">
+      Click a post 👈
+    </div>
+
+  </div>
+</div>
+
+<div style="
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(218,225,231,0.6);
+  color: rgba(0,0,0,0.705);
+  font-family: Arial;
+">
+  <p style="margin:0;" id="welcomeopen">Shrek OS</p>
+  <p style="margin:0;" id="timeElement">Time</p>
+</div>
+
+<div id="desktopApps" style="padding-top: 20px; padding-left: 20px;">
+
+<div id="charactersopen" style="
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 0 6px black);
+  margin-top: 20px;
+">
+
+  <img src="./App.png"
+       style="width:72px;height:72px;border-radius:16px;">
+
+  <p style="color:white;font-family:Arial;margin-top:6px;">
+    Characters
+  </p>
+
+</div>
+
+  <div id="postsopen" style="
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 0 6px black);
+  ">
+
+    <img
+      src="./Notebook.png"
+      alt="Notes"
+      style="
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
+      ">
+
+    <p style="
+      margin-top: 6px;
+      color: white;
+      font-family: Arial;
+    ">
+      Notes
+    </p>
+
+  </div>
+</div>
+
+<div class="window" id="characters"
+     style="top: 60px; left: 60px; display: none;">
+
+  <div class="windowheader" id="charactersheader">
+
+    <span style="letter-spacing: 2px; text-transform: uppercase;">
+      Character Encyclopedia
+    </span>
+
+    <p class="closebutton" id="charactersclose">
+      ❌
+    </p>
+  </div>
+
+  <div style="display: flex; height: 420px;">
+
+    <div id="charSidebar" style="
+      width: 180px;
+      border-right: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+      font-family: Arial;
+    "></div>
+
+    <div id="charContent" style="
+      flex: 1;
+      padding: 16px;
+      font-family: Arial;
+    ">
+      <h2>Select a character</h2>
+      <p>Click a name on the left to view details.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

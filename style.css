@@ -1,0 +1,36 @@
+.window {
+  position: absolute;
+  border: solid;
+  width: 700px;
+  border-radius: 16px;
+  padding: 13px;
+}
+
+.windowheader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(70, 120, 40, 0.9);
+  color: white;
+  padding: 8px 12px;
+  margin: -13px -13px 10px -13px;
+  border-radius: 16px 16px 0 0;
+  cursor: move;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.closebutton {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.character-item {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.character-item:hover {
+  background: rgba(0,0,0,0.08);
+}
