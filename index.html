@@ -16,7 +16,7 @@
      style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
 
   <div class="windowheader" id="welcomeheader">
-    <span style="font-size: 20px;">🚪</span>
+    <span style="font-size: 20px;"></span>
 
     <span style="letter-spacing: 2px; text-transform: uppercase;">
       Welcome
@@ -63,7 +63,7 @@
 
     <div id="postContent"
          style="flex: 1; background: white; border-radius: 10px; padding: 10px; overflow-y: auto;">
-      Click a post 👈
+      Click a post
     </div>
 
   </div>
@@ -127,6 +127,25 @@
     </p>
 
   </div>
+
+  <div id="calculatoropen" style="
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 0 6px black);
+  margin-top: 20px;
+">
+
+  <img src="./calculator.png"
+       style="width:72px;height:72px;border-radius:16px;">
+
+  <p style="color:white;font-family:Arial;margin-top:6px;">
+    Calculator
+  </p>
+
+</div>
+
 </div>
 
 <div class="window" id="characters"
@@ -144,7 +163,7 @@
   </div>
 
     <div style="
-    display:flex; height:420px; background:#ffffff;border-radius:0 0 16px 16px;
+    display:flex; height:420px; background:#ffffff;border-radius:16px;
     ">
 
     <div id="charSidebar" style="
@@ -167,6 +186,42 @@
   </div>
 </div>
 
+<div class="window" id="calculator"
+     style="top:150px; left:180px; display:none;">
+
+  <div class="windowheader" id="calculatorheader">
+
+    <span>Calculator</span>
+
+    <p class="closebutton" id="calculatorclose">❌</p>
+
+  </div>
+
+  <div style="
+      background:#dff3d6;
+      padding:20px;
+      border-radius:16px;
+      font-family:Arial;
+  ">
+
+    <p>1st Number</p>
+    <input id="num1" type="number">
+
+    <p>2nd Number</p>
+    <input id="num2" type="number">
+
+    <br><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">−</button>
+    <button onclick="multiply()">×</button>
+    <button onclick="divide()">÷</button>
+
+    <h3 id="answer">Answer:</h3>
+
+  </div>
+
+</div>
 
 <script src="script.js"></script>
 

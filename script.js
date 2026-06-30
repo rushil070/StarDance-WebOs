@@ -97,11 +97,7 @@ setInterval(updateTime, 1000);
 
 dragElement(document.getElementById("welcome"));
 
-function dragElement(element) {
-  var initialX = 0;
-  var initialY = 0;
-  var currentX = 0;
-  var currentY = 0;
+function dragElement(element) { var initialX = 0; var initialY = 0; var currentX = 0; var currentY = 0;
 
 if (document.getElementById(element.id + "header")) {
   document.getElementById(element.id + "header").onmousedown = startDragging;
@@ -119,10 +115,7 @@ if (document.getElementById(element.id + "header")) {
     document.onmousemove = moveElement;
   }
 
-  function moveElement(e) {
-    e = e || window.event;
-    e.preventDefault();
-
+  function moveElement(e) { e = e || window.event; e.preventDefault();
     currentX = initialX - e.clientX;
     currentY = initialY - e.clientY;
 
@@ -132,10 +125,9 @@ if (document.getElementById(element.id + "header")) {
     element.style.top = (element.offsetTop - currentY) + "px";
     element.style.left = (element.offsetLeft - currentX) + "px";
   }
-
   function stopDragging() {
-    document.onmouseup = null;
-    document.onmousemove = null;
+    document.onmouseup=null;
+    document.onmousemove=null;
   }
 }
 
@@ -234,4 +226,56 @@ function loadCharacters() {
 
     sidebar.appendChild(item);
   }
+}
+
+var calculatorScreen = document.querySelector("#calculator");
+
+var calculatorOpen = document.querySelector("#calculatoropen");
+
+var calculatorClose = document.querySelector("#calculatorclose");
+
+calculatorOpen.addEventListener("click", function () {
+    openWindow(calculatorScreen);
+});
+
+calculatorClose.addEventListener("click", function () {
+    closeWindow(calculatorScreen);
+});
+
+dragElement(document.getElementById("calculator"));
+
+function add() {
+
+    let a = Number(document.querySelector("#num1").value);
+    let b = Number(document.querySelector("#num2").value);
+
+    document.querySelector("#answer").innerHTML =
+        "Answer: " + (a + b);
+}
+
+function subtract() {
+
+    let a = Number(document.querySelector("#num1").value);
+    let b = Number(document.querySelector("#num2").value);
+
+    document.querySelector("#answer").innerHTML =
+        "Answer: " + (a - b);
+}
+
+function multiply() {
+
+    var a = Number(document.querySelector("#num1").value);
+    var b = Number(document.querySelector("#num2").value);
+
+    document.querySelector("#answer").innerHTML =
+        "Answer: " + (a * b);
+}
+
+function divide() {
+
+    var a = Number(document.querySelector("#num1").value);
+    var b = Number(document.querySelector("#num2").value);
+
+    document.querySelector("#answer").innerHTML =
+        "Answer: " + (a / b);
 }
